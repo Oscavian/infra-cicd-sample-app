@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
+# if tempdir exists, delete it first
+if [[ -d "tempdir" ]]; then
+	rm -rf tempdir
+fi
+
 mkdir tempdir
 mkdir tempdir/templates
 mkdir tempdir/static
